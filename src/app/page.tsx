@@ -1,4 +1,5 @@
 // Server Component (default) - safe to import a Client Component
+import PillNav from "../../components/reactbits/PillNav";
 import RippleGridClient from "../../components/reactbits/RippleGrid";
 import HeroTitleClient from "./_components/HeroTitleClient";
 import MagicBento from "../../components/reactbits/MagicBento"; // note the path (src/app -> ../../components)
@@ -45,14 +46,45 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="relative min-h-[80svh] overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden">
+      {/* Pill Nav */}
+      <PillNav
+        socials={[
+          {
+            type: "linkedin",
+            href: "https://www.linkedin.com/in/arjun-sridhar-6466751b7/",
+            ariaLabel: "LinkedIn",
+          },
+          { type: "cv", href: "/cv.pdf", ariaLabel: "Download CV" },
+          {
+            type: "github",
+            href: "https://github.com/smooth-glitch",
+            ariaLabel: "GitHub",
+          },
+        ]}
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Projects", href: "/projects" },
+          { label: "About", href: "/about" },
+          { label: "Contact", href: "/contact" },
+        ]}
+        activeHref="/"
+        initialLoadAnimation={true}
+        className="custom-nav"
+        ease="power2.easeOut"
+        baseColor="#14011F" // Deep purple background for nav
+        pillColor="#1E0933" // Slightly lighter pill color
+        hoveredPillTextColor="#ffffff"
+        pillTextColor="#b3eaff" // Cyan text glow tone
+      />
+
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="fixed inset-0 -z-10 pointer-events-none">
         <RippleGridClient
           enableRainbow={false}
           gridColor="#d627F5"
-          rippleIntensity={0.02}
-          gridSize={40}
+          rippleIntensity={0.05}
+          gridSize={30}
           gridThickness={20}
           mouseInteraction={true}
           mouseInteractionRadius={1.6}
@@ -80,7 +112,7 @@ export default function HomePage() {
               miniAvatarUrl="https://media.journoportfolio.com/users/405725/images/5803a3a0-dd39-4880-980c-74de9dc5d158.jpg"
               showUserInfo
               showBehindGradient={false}
-              innerGradient={`url(https://media.journoportfolio.com/users/405725/images/5803a3a0-dd39-4880-980c-74de9dc5d158.jpg)`}
+              innerGradient={`url(public/card-avatar.jpg)`}
               enableTilt
               enableMobileTilt={false}
             />

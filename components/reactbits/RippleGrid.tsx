@@ -17,21 +17,23 @@ type RippleGridProps = {
   gridRotation?: number;         // degrees
   mouseInteraction?: boolean;
   mouseInteractionRadius?: number; // ~1..2
+  useWindowPointer?: boolean;
 };
 
 export default function RippleGrid({
   enableRainbow = false,
   gridColor = "#ffffff",
-  rippleIntensity = 0.03,
+  rippleIntensity = 0.07,
   gridSize = 10.0,
   gridThickness = 15.0,
-  fadeDistance = 4,
+  fadeDistance = 20,
   vignetteStrength = 2.0,
-  glowIntensity = 0.4,
+  glowIntensity = 0.9,
   opacity = 1.0,
   gridRotation = 0,
   mouseInteraction = true,
-  mouseInteractionRadius = 1
+  mouseInteractionRadius = 1,
+  useWindowPointer = true,
 }: RippleGridProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mousePositionRef = useRef({ x: 0.5, y: 0.5 });
