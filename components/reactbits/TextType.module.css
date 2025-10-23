@@ -1,0 +1,37 @@
+.textType {
+    display: inline-block;
+    white-space: pre-wrap;
+  }
+  
+  .textTypeContent {
+    /* inherits text color; override via props textColors */
+  }
+  
+  .textTypeCursor {
+    margin-left: 0.25rem;
+    display: inline-block;
+    opacity: 1;
+  }
+  
+  .textTypeCursorHidden {
+    display: none;
+  }
+  
+  .pixelFont {
+    letter-spacing: 0.02em;             /* tiny spacing to avoid squish */
+    line-height: 1.2;
+    /* Try to keep antialiasing minimal for sharper pixels */
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: optimizeSpeed;
+  }
+  .pixelOutline {
+    /* optional chunky outline/glow for retro look */
+    text-shadow:
+      0 1px 0 #000,
+      1px 0 0 #000,
+      -1px 0 0 #000,
+      0 -1px 0 #000;
+  }
+  
+      

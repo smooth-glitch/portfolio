@@ -26,7 +26,7 @@ export default function RippleGrid({
   gridSize = 10.0,
   gridThickness = 15.0,
   fadeDistance = 4,
-  vignetteStrength = 9.0,
+  vignetteStrength = 2.0,
   glowIntensity = 0.4,
   opacity = 1.0,
   gridRotation = 0,
