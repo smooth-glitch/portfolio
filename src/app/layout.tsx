@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./magic-bento.css";
+import "./profile-card.css";
 import type { Metadata } from "next";
 import { Press_Start_2P } from "next/font/google";
 
