@@ -24,12 +24,12 @@ export default function RippleGrid({
   enableRainbow = false,
   gridColor = "#ffffff",
   rippleIntensity = 0.07,
-  gridSize = 10.0,
+  gridSize = 20.0,
   gridThickness = 15.0,
   fadeDistance = 20,
-  vignetteStrength = 2.0,
+  vignetteStrength = 7,
   glowIntensity = 0.9,
-  opacity = 1.0,
+  opacity = 2.0,
   gridRotation = 0,
   mouseInteraction = true,
   mouseInteractionRadius = 1,
@@ -317,3 +317,5 @@ void main() {
 
   return <div ref={containerRef} className={styles.rippleGridContainer} />;
 }
+
+export type { RippleGridProps };

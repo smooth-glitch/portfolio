@@ -339,12 +339,30 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           <div className="pc-shine" />
           <div className="pc-glare" />
 
-          <div className="pc-content pc-avatar-content">
+          <div
+            className="pc-content pc-avatar-content"
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "4 / 5",
+              overflow: "hidden",
+              borderRadius: "16px",
+            }}
+          >
             <img
               className="avatar"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
               loading="lazy"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover", // <-- ensures no stretching / letterboxing
+                objectPosition: "center",
+                display: "block",
+              }}
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.style.display = "none";
@@ -359,6 +377,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                       src={miniAvatarUrl || avatarUrl}
                       alt={`${name || "User"} mini avatar`}
                       loading="lazy"
+                      style={{
+                        width: 28,
+                        height: 28,
+                        objectFit: "cover",
+                        borderRadius: "9999px",
+                      }}
                       onError={(e) => {
                         const target = e.currentTarget as HTMLImageElement;
                         target.style.opacity = "0.5";
