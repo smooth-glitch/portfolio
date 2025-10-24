@@ -4,6 +4,7 @@ import RippleGridClient from "../../components/reactbits/RippleGrid";
 import HeroTitleClient from "./_components/HeroTitleClient";
 import MagicBento from "../../components/reactbits/MagicBento"; // note the path (src/app -> ../../components)
 import ProfileCardClient from "./_components/ProfileCardClient";
+import ScrollReveal from "../../components/reactbits/ScrollReveal";
 
 export default function HomePage() {
   const homeCards = [
@@ -64,9 +65,9 @@ export default function HomePage() {
         ]}
         items={[
           { label: "Home", href: "/" },
-          { label: "Projects", href: "/projects" },
-          { label: "About", href: "/about" },
-          { label: "Contact", href: "/contact" },
+          { label: "Projects", href: "#projects" },
+          { label: "About", href: "#about" },
+          { label: "Contact", href: "#contact" },
         ]}
         activeHref="/"
         initialLoadAnimation={true}
@@ -123,8 +124,14 @@ export default function HomePage() {
       <br />
 
       {/* Magic Bento section — sits right below the hero */}
-      <section className="relative z-10 mx-auto max-w-6xl px-6 pb-24">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6"></h2>
+      <section
+        id="projects"
+        className="relative z-10 mx-auto max-w-6xl px-6 pb-24 scroll-mt-24"
+      >
+        <h2 className="mb-8 text-center text-2xl md:text-3xl font-bold pixel-heading pixel-heading-rgb">
+          {"<Projects />"}
+        </h2>
+        <div className="h-1 w-48 mx-auto mb-12 bg-cyan-400/60 shadow-[0_0_12px_rgba(56,244,255,0.7)] rounded-full"></div>
         <MagicBento
           cards={homeCards}
           textAutoHide
@@ -138,6 +145,66 @@ export default function HomePage() {
           particleCount={50}
           glowColor="132, 0, 255" // RGB, no '#'
         />
+      </section>
+
+      {/* About */}
+      <section
+        id="about"
+        className="relative z-10 mx-auto max-w-5xl px-6 py-24 scroll-mt-24 text-center"
+      >
+        <h2 className="text-2xl md:text-3xl mb-8 tracking-widest text-cyan-300 font-bold pixel-heading">
+          {"<About />"}
+        </h2>
+
+        <div className="h-1 w-48 mx-auto mb-12 bg-cyan-400/60 shadow-[0_0_12px_rgba(56,244,255,0.7)] rounded-full"></div>
+
+        <ScrollReveal
+          baseOpacity={0}
+          enableBlur={true}
+          baseRotation={8}
+          blurStrength={10}
+          containerClassName="max-w-3xl mx-auto text-center leading-relaxed space-y-6"
+        >
+          {`(•‿•) Hi, I’m Arjun Sridhar — a backend developer from Bangalore with a passion for building things that actually make sense.  
+  
+(⌐■_■) I believe good code isn’t just efficient — it’s clean, resilient, and quietly powerful.  
+  
+⚙️ From crafting REST APIs and predictive models to designing smooth UIs, I love solving real-world problems that matter.  
+  
+(￣▽￣)ゞ Outside the terminal, I watch movies, play story-driven games, go on treks, and experiment with tech that blurs art and logic ☆彡`}
+        </ScrollReveal>
+      </section>
+
+      {/* Contact */}
+      <section
+        id="contact"
+        className="relative z-10 mx-auto max-w-5xl px-6 py-24 scroll-mt-24 text-center"
+      >
+        <h2 className="text-2xl md:text-3xl mb-8 tracking-widest font-bold pixel-heading pixel-heading-rgb">
+          {"<Contact />"}
+        </h2>
+
+        <div className="h-1 w-48 mx-auto mb-12 bg-cyan-400/60 shadow-[0_0_12px_rgba(56,244,255,0.7)] rounded-full"></div>
+
+        <ScrollReveal
+          baseOpacity={0}
+          enableBlur={true}
+          baseRotation={10}
+          blurStrength={10}
+          containerClassName="max-w-3xl mx-auto text-left leading-relaxed"
+          textClassName="press-start-white"
+        >
+          {`(✉️) I’m always open to exciting opportunities, collaborations, or even a casual geek-out about tech, design, or games.  
+(★‿★) Whether it’s building something that pushes boundaries, exploring new ideas, or just sharing creative energy — feel free to reach out!  
+(⌐■_■) Let’s connect and make something cool together ✦`}
+        </ScrollReveal>
+
+        <a
+          href="mailto:arjunsridhar445@gmail.com"
+          className="inline-block mt-10 text-lg md:text-xl font-bold pixel-heading pixel-heading-rgb transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(56,244,255,0.8)]"
+        >
+          arjunsridhar445@gmail.com
+        </a>
       </section>
     </main>
   );

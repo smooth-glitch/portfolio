@@ -2,6 +2,7 @@ import "./globals.css";
 import "./magic-bento.css";
 import "./profile-card.css";
 import "./PillNav.css";
+import "./ScrollReveal.css";
 import type { Metadata } from "next";
 import { Press_Start_2P } from "next/font/google";
 

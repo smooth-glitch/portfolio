@@ -1,37 +1,81 @@
 .textType {
-    display: inline-block;
-    white-space: pre-wrap;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.textTypeContent {
+  /* inherits text color; override via props textColors */
+}
+
+.textTypeCursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.textTypeCursorHidden {
+  display: none;
+}
+
+.pixelFont {
+  letter-spacing: 0.02em; /* tiny spacing to avoid squish */
+  line-height: 1.2;
+  /* Try to keep antialiasing minimal for sharper pixels */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeSpeed;
+}
+.pixelOutline {
+  /* optional chunky outline/glow for retro look */
+  text-shadow: 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.hero-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: 0.05em;
+  text-align: left;
+  line-height: 1.3;
+  background: linear-gradient(90deg, #38f4ff, #d627f5, #38f4ff, #d627f5);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hueShift 6s linear infinite;
+  text-shadow: 0 0 10px rgba(56, 244, 255, 0.6),
+    0 0 30px rgba(214, 39, 245, 0.3);
+}
+
+@keyframes hueShift {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .textTypeContent {
-    /* inherits text color; override via props textColors */
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .textTypeCursor {
-    margin-left: 0.25rem;
-    display: inline-block;
-    opacity: 1;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .textTypeCursorHidden {
-    display: none;
+}
+
+/* === RGB hue for Hero TextType === */
+.textType {
+  background: linear-gradient(90deg, #38f4ff, #d627f5, #38f4ff, #d627f5);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hueShift 6s linear infinite;
+  text-shadow: 0 0 10px rgba(56, 244, 255, 0.6),
+    0 0 30px rgba(214, 39, 245, 0.3);
+}
+
+@keyframes hueShift {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .pixelFont {
-    letter-spacing: 0.02em;             /* tiny spacing to avoid squish */
-    line-height: 1.2;
-    /* Try to keep antialiasing minimal for sharper pixels */
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: auto;
-    text-rendering: optimizeSpeed;
+  50% {
+    background-position: 100% 50%;
   }
-  .pixelOutline {
-    /* optional chunky outline/glow for retro look */
-    text-shadow:
-      0 1px 0 #000,
-      1px 0 0 #000,
-      -1px 0 0 #000,
-      0 -1px 0 #000;
+  100% {
+    background-position: 0% 50%;
   }
-  
-      
+}
