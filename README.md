@@ -32,9 +32,9 @@
 ## 🚀 Features
 
 - ✨ **Modern UI** — Clean layout, responsive design, and polished typography.
-- 🎞️ **Smooth Animations** — Motion effects with Framer Motion + GSAP. [page:2]
+- 🎞️ **Smooth Animations** — Motion effects with Framer Motion + GSAP.
 - 🧩 **Component-based Structure** — Easy to extend and maintain.
-- ⚡ **Fast & SEO-friendly** — Built with Next.js for performance and routing. [page:2]
+- ⚡ **Fast & SEO-friendly** — Built with Next.js for performance and routing.
 - 📱 **Fully Responsive** — Works across desktop, tablet, and mobile.
 
 ---
@@ -89,8 +89,8 @@ Arjun Sridhar
 🌐 LinkedIn: https://www.linkedin.com/in/arjun-sridhar-6466751b7
 
 ## 🧠 Learnings & Highlights
-- Building a portfolio with modern Next.js structure and clean component patterns. [page:2]
-- Creating smooth micro-interactions and scroll animations (Framer Motion / GSAP). [page:2]
+- Building a portfolio with modern Next.js structure and clean component patterns.
+- Creating smooth micro-interactions and scroll animations (Framer Motion / GSAP).
 - Designing a responsive layout with Tailwind utility-first styling.
 
 ## 🏁 Future Enhancements
