@@ -1,4 +1,4 @@
-<h1 align="center">🌐 Arjun Portfolio</h1>
+<h1 align="center">🔐 Personal Portfolio</h1>
 
 <p align="center">
   <b>Personal portfolio built from scratch.</b><br/>
