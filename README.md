@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Personal portfolio built from scratch.</b><br/>
-  A modern, responsive portfolio built with <b>Next.js</b>, <b>TypeScript</b>, <b>Tailwind CSS</b>, and animation libraries for a smooth experience. [page:2]
+  A modern, responsive portfolio built with <b>Next.js</b>, <b>TypeScript</b>, <b>Tailwind CSS</b>, and animation libraries for a smooth experience.
 </p>
 
 <p align="center">
